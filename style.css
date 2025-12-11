@@ -1,0 +1,72 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+background: transparent;
+
+  font-family: 'Share Tech Mono', monospace;
+  user-select: none;
+
+}
+
+/* Canvas fullscreen */
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* TITLE OVERLAY */
+#title-overlay {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  color: #ffffff;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#title-overlay h1 {
+  margin: 0;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+#title-overlay h2 {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* FIELD JOURNAL OVERLAY */
+#journal-overlay {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  max-height: 80vh;
+
+  color: #fff;
+  font-family: 'Share Tech Mono', monospace;
+  z-index: 20;
+
+  overflow-y: scroll;   /* FORCE SCROLL */
+  padding-right: 12px;
+  pointer-events: auto; /* allow scroll wheel and touch */
+  background: rgba(0,0,0,0.15); /* optional slight contrast */
+}
+
+#journal-text {
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+
+#journal-text {
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
