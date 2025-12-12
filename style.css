@@ -70,3 +70,29 @@ canvas {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+
+/* NAV MENU */
+nav {
+  position: fixed;
+  top: 10px;
+  right: 40px;
+
+  z-index: 30; /* ABOVE title (10) and journal (20) */
+  
+  display: flex;
+  gap: 20px;
+
+  font-size: 1rem;
+  color: #fff;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
