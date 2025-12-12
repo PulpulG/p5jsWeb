@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>victorPauloGuzman</title>
+  <title>Journal — victorPauloGuzman</title>
 
   <!-- Console-style font -->
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -13,25 +13,31 @@
 </head>
 
 <body>
-  <nav>
+
+<!-- NAV -->
+<nav>
   <a href="index.html">Home</a>
   <a href="gallery.html">Gallery</a>
   <a href="contact.html">Contact</a>
-  
-
 </nav>
 
+<!-- TITLE -->
+<div id="title-overlay">
+  <h1>victorPauloGuzman</h1>
+  <h2>Chef, Architect and a Visual Artist learning to code . . . </h2>
+</div>
 
-  <!-- TITLE OVERLAY -->
-  <div id="title-overlay">
-    <h1>victorPauloGuzman</h1>
-    <h2>Chef, Architect and a Visual Artist learning to code . . . </h2>
-  </div>
+<!-- JOURNAL TEXT (NOW EMPTY — script types into it) -->
+<div id="journal-overlay">
+  <div id="journal-text"></div>
+</div>
 
-  <!-- FIELD JOURNAL OVERLAY -->
-  <div id="journal-overlay">
-    <pre id="journal-text">
+<!-- BACKGROUND VISUAL -->
+<script src="sketch.js"></script>
 
+<!-- TYPEWRITER EFFECT -->
+<script>
+const journalContent = `
 Dic.11.2025 
 //--------------------- 08:58 ---------------------
 
@@ -68,29 +74,39 @@ breadcrumbs for the version of me who will read this later.
 
 Dic.10.2025
 // -------------------- 08:19 ------------------------------ 
-Today we to bed at 1 ambecause I played around with my liquid simulation 
-code in P5.Js, now I'm at the version 008  and still upgrading. creating more 
-liquid flow motion not by adding more speed but by adding more stillness to 
-the liquid drop, as usual I crossed my girlfriend to San Diego to work and 
-returned home to play more with the "liquidSim", I'm trying to reach out more
-people to my art, still trying a lot of web3 pages and trying to get commissions 
+Today we went to bed at 1 am because I played around with my liquid simulation 
+code in P5.Js, now I'm at version 008 and still upgrading. Creating more 
+liquid flow motion not by adding speed but by adding stillness to the liquid 
+drop. As usual I crossed my girlfriend to San Diego to work and 
+returned home to play more with "liquidSim". I'm trying to reach out more
+people with my art, still trying a lot of web3 pages and trying to get commissions 
 out of anywhere I can find. 
 
 //-------------------- 22:04 -------------------------------
-it night and I didn't say down to program my p5.js sketches, they discoected 
-our gas line and I had to resolved that issue. I did had a visit from a glitch 
-enthusiasm friend: Luis (Happysnacks) and we ended up talking about diferent 
-glitched and AI tools, we are trying to reach out people and money by doing
-live videos on diferent platforms, with the goal of getting paid for doing our art, 
-and trying to create a series of events with out brand: Liquid Glitch.
+It's night and I didn't sit down to program my p5.js sketches — they disconnected 
+our gas line and I had to resolve that issue. I did get a visit from a glitch 
+enthusiast friend: Luis (Happysnacks), and we ended up talking about 
+different glitches and AI tools. We're trying to reach people and money by doing
+live videos on different platforms, with the goal of getting paid for doing our art, 
+and trying to create a series of events with our brand: Liquid Glitch.
+`;
 
+let i = 0;
+const speed = 30;      // typing speed
+const delay = 700;     // delay before typing starts
 
+const out = document.getElementById("journal-text");
 
+function typeWriterJournal() {
+  if (i < journalContent.length) {
+    out.textContent += journalContent.charAt(i);
+    i++;
+    setTimeout(typeWriterJournal, speed);
+  }
+}
 
-    </pre>
-  </div>
-
-  <script src="sketch.js"></script>
+setTimeout(typeWriterJournal, delay);
+</script>
 
 </body>
 </html>

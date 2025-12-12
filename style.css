@@ -1,15 +1,15 @@
+/* GLOBAL */
 html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-background: transparent;
-
+  background: transparent;
   font-family: 'Share Tech Mono', monospace;
   user-select: none;
-
+  color: #fff;
 }
 
-/* Canvas fullscreen */
+/* CANVAS BACKGROUND */
 canvas {
   display: block;
   position: fixed;
@@ -18,14 +18,14 @@ canvas {
   z-index: 0;
 }
 
-/* TITLE OVERLAY */
+/* TITLE */
 #title-overlay {
   position: fixed;
   top: 40px;
   left: 40px;
   color: #ffffff;
-  pointer-events: none;
   z-index: 10;
+  pointer-events: none;
 }
 
 #title-overlay h1 {
@@ -40,7 +40,7 @@ canvas {
   opacity: 0.8;
 }
 
-/* FIELD JOURNAL OVERLAY */
+/* JOURNAL AREA (scrollable) */
 #journal-overlay {
   position: fixed;
   bottom: 40px;
@@ -48,27 +48,31 @@ canvas {
   right: 40px;
   max-height: 80vh;
 
-  color: #fff;
-  font-family: 'Share Tech Mono', monospace;
   z-index: 20;
+  overflow-y: scroll;
 
-  overflow-y: scroll;   /* FORCE SCROLL */
   padding-right: 12px;
-  pointer-events: auto; /* allow scroll wheel and touch */
-  background: transparent;/* optional slight contrast */
+  background: transparent;
+  pointer-events: auto;
 }
 
 #journal-text {
   white-space: pre-wrap;
   font-size: 1rem;
   line-height: 1.5rem;
+  user-select: none;
 }
 
-
-#journal-text {
-  white-space: pre-wrap;
-  font-size: 1rem;
-  line-height: 1.5rem;
+/* INVISIBLE SCROLLBAR */
+#journal-overlay::-webkit-scrollbar {
+  width: 6px;
+}
+#journal-overlay::-webkit-scrollbar-track {
+  background: transparent;
+}
+#journal-overlay::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
 }
 
 /* NAV MENU */
@@ -76,14 +80,12 @@ nav {
   position: fixed;
   top: 10px;
   right: 40px;
+  z-index: 30;
 
-  z-index: 30; /* ABOVE title (10) and journal (20) */
-  
   display: flex;
   gap: 20px;
 
   font-size: 1rem;
-  color: #fff;
 }
 
 nav a {
