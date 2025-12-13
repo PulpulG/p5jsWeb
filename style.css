@@ -9,6 +9,15 @@ html, body {
   color: #fff;
 } 
 
+/* FORCE ALL LINKS TO BE WHITE */
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /* CANVAS BACKGROUND */
 canvas {
   display: block;
@@ -22,7 +31,7 @@ canvas {
 #title-overlay {
   position: fixed;
   top: 40px;
-  left: 40px;
+  left: 20px;
   color: #ffffff;
   z-index: 10;
   pointer-events: none;
@@ -40,11 +49,11 @@ canvas {
   opacity: 0.8;
 }
 
-/* JOURNAL AREA (scrollable) */
+/* Text AREA (scrollable) */
 #journal-overlay {
   position: fixed;
   bottom: 40px;
-  left: 40px;
+  left: 20px;
   right: 40px;
   max-height: 80vh;
 
@@ -61,6 +70,7 @@ canvas {
   font-size: 1rem;
   line-height: 1.5rem;
   user-select: none;
+  color: #ffffff;
 }
 
 /* INVISIBLE SCROLLBAR */
@@ -75,7 +85,7 @@ canvas {
   border-radius: 10px;
 }
 
-/* NAV MENU */
+/* Navigation MENU */
 nav {
   position: fixed;
   top: 10px;
@@ -89,7 +99,7 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   opacity: 0.8;
 }
