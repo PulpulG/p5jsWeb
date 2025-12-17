@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,30 +14,35 @@
 </head>
 
 <body>
-<!-- NAV -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
 
-<!-- TITLE -->
-<div id="title-overlay">
-  <h1>victorPauloGuzman</h1>
-  <h2>Chef, Architect and a Visual Artist learning to code . . . </h2>
-</div>
+    <a href='https://ko-fi.com/U7U71JQ539' target='_blank'>
+      <img height='26' style='border:0px;height:26px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6'
+        alt='Buy Me a Coffee at ko-fi.com' />
+    </a>
+  </nav>
 
-<!-- JOURNAL TEXT (NOW EMPTY — script types into it) -->
-<div id="journal-overlay">
-  <div id="journal-text"></div>
-</div>
+  <!-- TITLE -->
+  <div id="title-overlay">
+    <h1>victorPauloGuzman</h1>
+    <h2>Chef, Architect and a Visual Artist learning to code . . . </h2>
+  </div>
 
-<!-- BACKGROUND VISUAL -->
-<script src="sketch.js"></script>
+  <!-- JOURNAL TEXT (NOW EMPTY — script types into it) -->
+  <div id="journal-overlay">
+    <div id="journal-text"></div>
+  </div>
 
-<!-- TYPEWRITER EFFECT -->
-<script>
-const journalContent = `
+  <!-- BACKGROUND VISUAL -->
+  <script src="sketch.js"></script>
+
+  <!-- TYPEWRITER EFFECT -->
+  <script>
+    const journalContent = `
 
 Dic.12.2025
  //-------------------- 10:22 -------------------------
@@ -155,22 +161,23 @@ live videos on different platforms, with the goal of getting paid for doing our 
 and trying to create a series of events with our brand: Liquid Glitch.
 `;
 
-let i = 0;
-const speed = 30;      // typing speed
-const delay = 700;     // delay before typing starts
+    let i = 0;
+    const speed = 30;      // typing speed
+    const delay = 700;     // delay before typing starts
 
-const out = document.getElementById("journal-text");
+    const out = document.getElementById("journal-text");
 
-function typeWriterJournal() {
-  if (i < journalContent.length) {
-    out.textContent += journalContent.charAt(i);
-    i++;
-    setTimeout(typeWriterJournal, speed);
-  }
-}
+    function typeWriterJournal() {
+      if (i < journalContent.length) {
+        out.textContent += journalContent.charAt(i);
+        i++;
+        setTimeout(typeWriterJournal, speed);
+      }
+    }
 
-setTimeout(typeWriterJournal, delay);
-</script>
+    setTimeout(typeWriterJournal, delay);
+  </script>
 
 </body>
+
 </html>

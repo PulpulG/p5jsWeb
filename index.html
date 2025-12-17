@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,36 +15,35 @@
 
 <body>
 
-<!-- NAV MENU -->
-<nav>
-  <a href="journal.html">Journal</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
+  <!-- NAV MENU -->
+  <nav>
+    <a href="journal.html">Journal</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
 
-  <a href='https://ko-fi.com/U7U71JQ539' target='_blank'>
-    <img height='26' style='border:0px;height:26px;'
-     src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' 
-     alt='Buy Me a Coffee at ko-fi.com' />
+    <a href='https://ko-fi.com/U7U71JQ539' target='_blank'>
+      <img height='26' style='border:0px;height:26px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6'
+        alt='Buy Me a Coffee at ko-fi.com' />
 
-</nav>
+  </nav>
 
-<!-- TITLE -->
-<div id="title-overlay">
-  <h1>victorPauloGuzman</h1>
-  <h2>Chef, Architect and a Visual Artist learning to code . . .</h2>
-</div>
+  <!-- TITLE -->
+  <div id="title-overlay">
+    <h1>victorPauloGuzman</h1>
+    <h2>Chef, Architect and a Visual Artist learning to code . . .</h2>
+  </div>
 
-<!-- JOURNAL TEXT (EMPTY for typewriter) -->
-<div id="journal-overlay">
-  <div id="journal-text"></div>
-</div>
+  <!-- JOURNAL TEXT (EMPTY for typewriter) -->
+  <div id="journal-overlay">
+    <div id="journal-text"></div>
+  </div>
 
-<!-- BACKGROUND VISUAL -->
-<script src="sketch.js"></script>
+  <!-- BACKGROUND VISUAL -->
+  <script src="sketch.js"></script>
 
-<!-- TYPEWRITER SCRIPT -->
-<script>
-const typedText = `
+  <!-- TYPEWRITER SCRIPT -->
+  <script>
+    const typedText = `
 
   "Welcome to my space — a living sketchbook built with code,
   experiments, and late-night ideas.
@@ -51,22 +51,23 @@ const typedText = `
   into interactive experiences. Stay, click, read, explore."
 `;
 
-let index = 0;
-const speed = 30;       // speed of typing
-const startDelay = 800; // delay before starting
+    let index = 0;
+    const speed = 30;       // speed of typing
+    const startDelay = 800; // delay before starting
 
-const target = document.getElementById("journal-text");
+    const target = document.getElementById("journal-text");
 
-function typeWriter() {
-  if (index < typedText.length) {
-    target.textContent += typedText.charAt(index);
-    index++;
-    setTimeout(typeWriter, speed);
-  }
-}
+    function typeWriter() {
+      if (index < typedText.length) {
+        target.textContent += typedText.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
 
-setTimeout(typeWriter, startDelay);
-</script>
+    setTimeout(typeWriter, startDelay);
+  </script>
 
 </body>
+
 </html>

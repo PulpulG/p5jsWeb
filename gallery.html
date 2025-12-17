@@ -1,17 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Gallery</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — victorPauloGuzman</title>
+
+  <!-- Console-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
 </head>
+
 <body>
+
+  <!-- NAV MENU -->
   <nav>
     <a href="index.html">Home</a>
     <a href="journal.html">Journal</a>
     <a href="contact.html">Contact</a>
+
+    <a href='https://ko-fi.com/U7U71JQ539' target='_blank'>
+      <img height='26' style='border:0px;height:26px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6'
+        alt='Buy Me a Coffee at ko-fi.com' />
+    </a>
   </nav>
 
-  <h1>Gallery</h1>
-  <p>Your images or artwork will go here.</p>
+  <!-- TITLE -->
+  <div id="title-overlay">
+    <h1>victorPauloGuzman</h1>
+    <h2>Gallery</h2>
+  </div>
+
+  <!-- JOURNAL TEXT (EMPTY for typewriter) -->
+  <div id="journal-overlay">
+    <div id="journal-text"></div>
+  </div>
+
+  <!-- BACKGROUND VISUAL -->
+  <script src="sketch.js"></script>
+
+  <!-- TYPEWRITER SCRIPT -->
+  <script>
+    const typedText = `
+
+  "Visual experiments, code sketches, and evolving ideas.
+  Each piece is a step in the process — exploring motion, color, and form."
+  
+  // Add your gallery description or artwork links here
+`;
+
+    let index = 0;
+    const speed = 30;       // speed of typing
+    const startDelay = 800; // delay before starting
+
+    const target = document.getElementById("journal-text");
+
+    function typeWriter() {
+      if (index < typedText.length) {
+        target.textContent += typedText.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    setTimeout(typeWriter, startDelay);
+  </script>
+
 </body>
+
 </html>

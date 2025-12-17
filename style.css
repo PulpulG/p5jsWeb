@@ -1,5 +1,6 @@
 /* GLOBAL */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -7,7 +8,7 @@ html, body {
   font-family: 'Share Tech Mono', monospace;
   user-select: none;
   color: #fff;
-} 
+}
 
 /* FORCE ALL LINKS TO BE WHITE */
 a,
@@ -62,7 +63,7 @@ canvas {
 
   padding-right: 12px;
   background: transparent;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 #journal-text {
@@ -71,15 +72,18 @@ canvas {
   line-height: 1.5rem;
   user-select: none;
   color: #ffffff;
+  pointer-events: none;
 }
 
 /* INVISIBLE SCROLLBAR */
 #journal-overlay::-webkit-scrollbar {
   width: 6px;
 }
+
 #journal-overlay::-webkit-scrollbar-track {
   background: transparent;
 }
+
 #journal-overlay::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
